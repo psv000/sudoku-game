@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU-8BIT</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+
+    <h1>> SUDOKU_</h1>
+
+    <div class="player-info">
+        <label for="player-name">GAMER:</label>
+        <input type="text" id="player-name" maxlength="50">
+        <div id="timer">00:00</div>
+    </div>
+
+    <div class="controls">
+        <select id="difficulty">
+            <option value="beginner">ROOKIE</option>
+            <option value="easy">EASY</option>
+            <option value="medium" selected>NORMAL</option>
+            <option value="hard">HARD</option>
+            <option value="expert">VETERAN</option>
+        </select>
+        <button id="new-game-btn">NEW GAME</button>
+        <button id="check-btn">CHECK</button>
+        <button id="pause-btn">PAUSE</button>
+    </div>
+
+    <div class="grid-wrapper">
+        <div id="sudoku-grid"></div>
+        <div id="pause-overlay" class="hidden">
+            <div class="pause-content">
+                <h2>PAUSED</h2>
+            </div>
+        </div>
+    </div>
+
+    <p id="message"></p>
+
+    <div class="leaderboard-container">
+        <h2>HIGH SCORES</h2>
+        <div id="leaderboard"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
